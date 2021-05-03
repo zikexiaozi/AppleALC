@@ -6,6 +6,7 @@ AppleALC Changelog
 - Fixed CS4206 and ALC885 support for legacy Macs
 - Improvement ALC289 layout-id 87 for Alienware m15 by GitNaufal
 - Added ALC1220 layout-id 98 for Mi Gaming Notebook Creator by Xsixu
+- Added ALC1220 layout-id 100 for Hasee_G8-CU7PK by R-a-s-c-a-l
 
 #### v1.5.9
 - Added CS4206 layout-id 24 and 60
