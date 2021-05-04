@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.6.1
+- Fixed broken formatting in CS4206's layout76.xml
+
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
 - Added `use-apple-layout-id` property to use `apple-layout-id` as `layout-id` on Macs
