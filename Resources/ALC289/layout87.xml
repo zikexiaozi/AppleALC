@@ -614,7 +614,7 @@
                         </dict>
                     </dict>
                 </dict>
-            <dict/>
+            </dict>
 			<key>Mic</key>
 			<dict>
                 <key>MuteGPIO</key>
