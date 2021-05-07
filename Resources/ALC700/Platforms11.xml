@@ -21,8 +21,8 @@
 			<string>osy - NUC8i7HNK/NUC8i7HVK</string>
 			<key>PathMap</key>
 			<array>
-				<array> 
-					<array> 
+				<array>
+					<array>
 						<array>
 							<dict>
 								<key>Amp</key>
@@ -65,7 +65,7 @@
 						</array>
 					</array>
 				</array>
-				<array> 
+				<array>
 					<array>
 						<array>
 							<dict>
@@ -109,8 +109,8 @@
 						</array>
 					</array>
 				</array>
-				<array> 
-					<array> 
+				<array>
+					<array>
 						<array>
 							<dict>
 								<key>Amp</key>
@@ -151,7 +151,7 @@
 							</dict>
 						</array>
 					</array>
-					<array> 
+					<array>
 						<array>
 							<dict>
 								<key>Amp</key>
@@ -193,8 +193,8 @@
 						</array>
 					</array>
 				</array>
-				<array> 
-					<array> 
+				<array>
+					<array>
 						<array>
 							<dict>
 								<key>NoPinSense</key>

@@ -1,53 +1,53 @@
 <dict>
-    <key>LayoutID</key>
-    <integer>13</integer>
-    <key>PathMapRef</key>
-    <array>
-        <dict>
-            <key>CodecID</key>
-            <array>
-                <integer>269697542</integer>
-            </array>
-            <key>ExtMic</key>
-            <dict>
-                <key>HeadsetMic_dBV</key>
-                <integer>1088421888</integer>
-                <key>MuteGPIO</key>
-                <integer>262144</integer>
-            </dict>
-            <key>Headphone</key>
-            <dict>
-            	<key>DefaultVolume</key>
-            	<integer>4292870144</integer>		
-                <key>AmpPostDelay</key>
-                <integer>50</integer>
-                <key>AmpPreDelay</key>
-                <integer>100</integer>
-                <key>Headset_dBV</key>
-                <integer>-1055916032</integer>
-                <key>IOMux</key>
-                <integer>0</integer>
-                <key>MuteGPIO</key>
-                <integer>16777217</integer>
-            </dict>
-            <key>Inputs</key>
-            <array>
-                <string>ExtMic</string>
-                <string>LineIn</string>
-                <string>Mic</string>
-            </array>
-            <key>IntSpeaker</key>
-            <dict>
-            	<key>DefaultVolume</key>
-            	<integer>4294049792</integer>		
-                <key>AmpPostDelay</key>
-                <integer>100</integer>
-                <key>AmpPreDelay</key>
-                <integer>100</integer>
-                <key>MaximumBootBeepValue</key>
-                <integer>87</integer>
-                <key>MuteGPIO</key>
-                <integer>3</integer>
+	<key>LayoutID</key>
+	<integer>13</integer>
+	<key>PathMapRef</key>
+	<array>
+		<dict>
+			<key>CodecID</key>
+			<array>
+				<integer>269697542</integer>
+			</array>
+			<key>ExtMic</key>
+			<dict>
+				<key>HeadsetMic_dBV</key>
+				<integer>1088421888</integer>
+				<key>MuteGPIO</key>
+				<integer>262144</integer>
+			</dict>
+			<key>Headphone</key>
+			<dict>
+				<key>AmpPostDelay</key>
+				<integer>50</integer>
+				<key>AmpPreDelay</key>
+				<integer>100</integer>
+				<key>DefaultVolume</key>
+				<integer>4292870144</integer>
+				<key>Headset_dBV</key>
+				<integer>-1055916032</integer>
+				<key>IOMux</key>
+				<integer>0</integer>
+				<key>MuteGPIO</key>
+				<integer>16777217</integer>
+			</dict>
+			<key>Inputs</key>
+			<array>
+				<string>ExtMic</string>
+				<string>LineIn</string>
+				<string>Mic</string>
+			</array>
+			<key>IntSpeaker</key>
+			<dict>
+				<key>AmpPostDelay</key>
+				<integer>100</integer>
+				<key>AmpPreDelay</key>
+				<integer>100</integer>
+				<key>DefaultVolume</key>
+				<integer>4294049792</integer>
+				<key>MaximumBootBeepValue</key>
+				<integer>87</integer>
+				<key>MuteGPIO</key>
+				<integer>3</integer>
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
@@ -56,10 +56,10 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspEqualization32</string>
 								<key>DspFuncInstance</key>
 								<integer>0</integer>
+								<key>DspFuncName</key>
+								<string>DspEqualization32</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>0</integer>
 							</dict>
@@ -138,17 +138,16 @@
 								</array>
 							</dict>
 							<key>PatchbayInfo</key>
-							<dict>
-							</dict>
+							<dict/>
 						</dict>
 						<key>DspFunction1</key>
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspEqualization32</string>
 								<key>DspFuncInstance</key>
 								<integer>1</integer>
+								<key>DspFuncName</key>
+								<string>DspEqualization32</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>1</integer>
 							</dict>
@@ -956,14 +955,210 @@
 								</dict>
 							</dict>
 						</dict>
+						<key>DspFunction10</key>
+						<dict>
+							<key>FunctionInfo</key>
+							<dict>
+								<key>DspFuncInstance</key>
+								<integer>10</integer>
+								<key>DspFuncName</key>
+								<string>DspSplineLimiter</string>
+								<key>DspFuncProcessingIndex</key>
+								<integer>10</integer>
+							</dict>
+							<key>ParameterInfo</key>
+							<dict>
+								<key>1</key>
+								<integer>0</integer>
+								<key>2</key>
+								<integer>0</integer>
+								<key>3</key>
+								<integer>976715828</integer>
+								<key>4</key>
+								<integer>1035489772</integer>
+								<key>5</key>
+								<integer>0</integer>
+								<key>6</key>
+								<integer>1092616192</integer>
+								<key>7</key>
+								<integer>953267991</integer>
+							</dict>
+							<key>PatchbayInfo</key>
+							<dict>
+								<key>InputPort0</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>0</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>8</integer>
+									<key>SourcePortIndex</key>
+									<integer>0</integer>
+								</dict>
+								<key>InputPort1</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>1</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>8</integer>
+									<key>SourcePortIndex</key>
+									<integer>1</integer>
+								</dict>
+							</dict>
+						</dict>
+						<key>DspFunction11</key>
+						<dict>
+							<key>FunctionInfo</key>
+							<dict>
+								<key>DspFuncInstance</key>
+								<integer>11</integer>
+								<key>DspFuncName</key>
+								<string>DspSplineLimiter</string>
+								<key>DspFuncProcessingIndex</key>
+								<integer>11</integer>
+							</dict>
+							<key>ParameterInfo</key>
+							<dict>
+								<key>1</key>
+								<integer>0</integer>
+								<key>2</key>
+								<integer>0</integer>
+								<key>3</key>
+								<integer>976715828</integer>
+								<key>4</key>
+								<integer>1035489772</integer>
+								<key>5</key>
+								<integer>0</integer>
+								<key>6</key>
+								<integer>1092616192</integer>
+								<key>7</key>
+								<integer>953267991</integer>
+							</dict>
+							<key>PatchbayInfo</key>
+							<dict>
+								<key>InputPort0</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>0</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>9</integer>
+									<key>SourcePortIndex</key>
+									<integer>0</integer>
+								</dict>
+								<key>InputPort1</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>1</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>9</integer>
+									<key>SourcePortIndex</key>
+									<integer>1</integer>
+								</dict>
+							</dict>
+						</dict>
+						<key>DspFunction12</key>
+						<dict>
+							<key>FunctionInfo</key>
+							<dict>
+								<key>DspFuncInstance</key>
+								<integer>12</integer>
+								<key>DspFuncName</key>
+								<string>Dsp3ChOutput</string>
+								<key>DspFuncProcessingIndex</key>
+								<integer>12</integer>
+							</dict>
+							<key>ParameterInfo</key>
+							<dict>
+								<key>1</key>
+								<integer>0</integer>
+								<key>10</key>
+								<integer>0</integer>
+								<key>11</key>
+								<integer>0</integer>
+								<key>12</key>
+								<integer>0</integer>
+								<key>14</key>
+								<integer>0</integer>
+								<key>15</key>
+								<integer>0</integer>
+								<key>16</key>
+								<integer>0</integer>
+								<key>2</key>
+								<integer>0</integer>
+								<key>3</key>
+								<integer>0</integer>
+								<key>4</key>
+								<integer>0</integer>
+								<key>6</key>
+								<integer>0</integer>
+								<key>7</key>
+								<integer>0</integer>
+								<key>8</key>
+								<integer>0</integer>
+							</dict>
+							<key>PatchbayInfo</key>
+							<dict>
+								<key>InputPort0</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>0</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>10</integer>
+									<key>SourcePortIndex</key>
+									<integer>0</integer>
+								</dict>
+								<key>InputPort1</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>1</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>10</integer>
+									<key>SourcePortIndex</key>
+									<integer>1</integer>
+								</dict>
+								<key>InputPort2</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>2</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>11</integer>
+									<key>SourcePortIndex</key>
+									<integer>0</integer>
+								</dict>
+								<key>InputPort3</key>
+								<dict>
+									<key>PortInstance</key>
+									<integer>3</integer>
+									<key>PortWidth</key>
+									<integer>1</integer>
+									<key>SourceFuncInstance</key>
+									<integer>11</integer>
+									<key>SourcePortIndex</key>
+									<integer>1</integer>
+								</dict>
+							</dict>
+						</dict>
 						<key>DspFunction2</key>
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspMultiBandCompressor</string>
 								<key>DspFuncInstance</key>
 								<integer>2</integer>
+								<key>DspFuncName</key>
+								<string>DspMultiBandCompressor</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>2</integer>
 							</dict>
@@ -973,35 +1168,23 @@
 								<integer>0</integer>
 								<key>2</key>
 								<integer>0</integer>
-								<key>3</key>
-								<integer>1</integer>
+								<key>21</key>
+								<integer>0</integer>
 								<key>26</key>
 								<integer>1142292480</integer>
 								<key>27</key>
 								<integer>1184645120</integer>
 								<key>28</key>
 								<integer>1184645120</integer>
-								<key>21</key>
-								<integer>0</integer>
 								<key>29</key>
+								<integer>1</integer>
+								<key>3</key>
 								<integer>1</integer>
 								<key>30</key>
 								<integer>0</integer>
 								<key>Compressor</key>
 								<array>
 									<dict>
-										<key>4</key>
-										<integer>0</integer>
-										<key>5</key>
-										<integer>0</integer>
-										<key>6</key>
-										<integer>0</integer>
-										<key>7</key>
-										<integer>0</integer>
-										<key>8</key>
-										<integer>1</integer>
-										<key>9</key>
-										<integer>1091567616</integer>
 										<key>10</key>
 										<integer>1114636288</integer>
 										<key>11</key>
@@ -1022,10 +1205,8 @@
 										<integer>1077936128</integer>
 										<key>19</key>
 										<integer>0</integer>
-									</dict>
-									<dict>
 										<key>4</key>
-										<integer>1</integer>
+										<integer>0</integer>
 										<key>5</key>
 										<integer>0</integer>
 										<key>6</key>
@@ -1036,6 +1217,8 @@
 										<integer>1</integer>
 										<key>9</key>
 										<integer>1091567616</integer>
+									</dict>
+									<dict>
 										<key>10</key>
 										<integer>1114636288</integer>
 										<key>11</key>
@@ -1056,6 +1239,18 @@
 										<integer>1082130432</integer>
 										<key>19</key>
 										<integer>0</integer>
+										<key>4</key>
+										<integer>1</integer>
+										<key>5</key>
+										<integer>0</integer>
+										<key>6</key>
+										<integer>0</integer>
+										<key>7</key>
+										<integer>0</integer>
+										<key>8</key>
+										<integer>1</integer>
+										<key>9</key>
+										<integer>1091567616</integer>
 									</dict>
 								</array>
 							</dict>
@@ -1089,10 +1284,10 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspMultiBandCompressor</string>
 								<key>DspFuncInstance</key>
 								<integer>3</integer>
+								<key>DspFuncName</key>
+								<string>DspMultiBandCompressor</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>3</integer>
 							</dict>
@@ -1102,35 +1297,23 @@
 								<integer>0</integer>
 								<key>2</key>
 								<integer>0</integer>
-								<key>3</key>
-								<integer>1</integer>
+								<key>21</key>
+								<integer>0</integer>
 								<key>26</key>
 								<integer>1142292480</integer>
 								<key>27</key>
 								<integer>1184645120</integer>
 								<key>28</key>
 								<integer>1184645120</integer>
-								<key>21</key>
-								<integer>0</integer>
 								<key>29</key>
+								<integer>1</integer>
+								<key>3</key>
 								<integer>1</integer>
 								<key>30</key>
 								<integer>0</integer>
 								<key>Compressor</key>
 								<array>
 									<dict>
-										<key>4</key>
-										<integer>0</integer>
-										<key>5</key>
-										<integer>0</integer>
-										<key>6</key>
-										<integer>0</integer>
-										<key>7</key>
-										<integer>0</integer>
-										<key>8</key>
-										<integer>1</integer>
-										<key>9</key>
-										<integer>1090519040</integer>
 										<key>10</key>
 										<integer>1116471296</integer>
 										<key>11</key>
@@ -1151,20 +1334,20 @@
 										<integer>0</integer>
 										<key>19</key>
 										<integer>0</integer>
+										<key>4</key>
+										<integer>0</integer>
+										<key>5</key>
+										<integer>0</integer>
+										<key>6</key>
+										<integer>0</integer>
+										<key>7</key>
+										<integer>0</integer>
+										<key>8</key>
+										<integer>1</integer>
+										<key>9</key>
+										<integer>1090519040</integer>
 									</dict>
 									<dict>
-										<key>4</key>
-										<integer>1</integer>
-										<key>5</key>
-										<integer>0</integer>
-										<key>6</key>
-										<integer>0</integer>
-										<key>7</key>
-										<integer>0</integer>
-										<key>8</key>
-										<integer>1</integer>
-										<key>9</key>
-										<integer>1090519040</integer>
 										<key>10</key>
 										<integer>1116471296</integer>
 										<key>11</key>
@@ -1185,6 +1368,18 @@
 										<integer>0</integer>
 										<key>19</key>
 										<integer>0</integer>
+										<key>4</key>
+										<integer>1</integer>
+										<key>5</key>
+										<integer>0</integer>
+										<key>6</key>
+										<integer>0</integer>
+										<key>7</key>
+										<integer>0</integer>
+										<key>8</key>
+										<integer>1</integer>
+										<key>9</key>
+										<integer>1090519040</integer>
 									</dict>
 								</array>
 							</dict>
@@ -1218,40 +1413,40 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspLoudness</string>
 								<key>DspFuncInstance</key>
 								<integer>4</integer>
+								<key>DspFuncName</key>
+								<string>DspLoudness</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>4</integer>
 							</dict>
 							<key>ParameterInfo</key>
 							<dict>
+								<key>1</key>
+								<integer>0</integer>
 								<key>10</key>
 								<integer>1143930880</integer>
-								<key>2</key>
-								<integer>0</integer>
-								<key>15</key>
-								<integer>-1038191064</integer>
-								<key>3</key>
-								<integer>0</integer>
 								<key>11</key>
 								<integer>1152445519</integer>
-								<key>16</key>
-								<integer>-1053647882</integer>
-								<key>4</key>
-								<integer>0</integer>
-								<key>5</key>
-								<integer>0</integer>
 								<key>12</key>
 								<integer>1053609165</integer>
-								<key>17</key>
-								<integer>-1052645281</integer>
 								<key>13</key>
 								<integer>1054280253</integer>
 								<key>14</key>
 								<integer>-1059061760</integer>
-								<key>1</key>
+								<key>15</key>
+								<integer>-1038191064</integer>
+								<key>16</key>
+								<integer>-1053647882</integer>
+								<key>17</key>
+								<integer>-1052645281</integer>
+								<key>2</key>
+								<integer>0</integer>
+								<key>3</key>
+								<integer>0</integer>
+								<key>4</key>
+								<integer>0</integer>
+								<key>5</key>
 								<integer>0</integer>
 							</dict>
 							<key>PatchbayInfo</key>
@@ -1284,31 +1479,31 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspCrossover2Dot1</string>
 								<key>DspFuncInstance</key>
 								<integer>5</integer>
+								<key>DspFuncName</key>
+								<string>DspCrossover2Dot1</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>5</integer>
 							</dict>
 							<key>ParameterInfo</key>
 							<dict>
-								<key>7</key>
-								<integer>1065353216</integer>
-								<key>3</key>
-								<integer>1065353216</integer>
-								<key>9</key>
-								<integer>2</integer>
-								<key>5</key>
-								<integer>2</integer>
 								<key>1</key>
 								<integer>0</integer>
-								<key>6</key>
-								<integer>1172254238</integer>
 								<key>10</key>
 								<integer>1149861888</integer>
 								<key>2</key>
 								<integer>0</integer>
+								<key>3</key>
+								<integer>1065353216</integer>
+								<key>5</key>
+								<integer>2</integer>
+								<key>6</key>
+								<integer>1172254238</integer>
+								<key>7</key>
+								<integer>1065353216</integer>
+								<key>9</key>
+								<integer>2</integer>
 							</dict>
 							<key>PatchbayInfo</key>
 							<dict>
@@ -1340,10 +1535,10 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspEqualization32</string>
 								<key>DspFuncInstance</key>
 								<integer>6</integer>
+								<key>DspFuncName</key>
+								<string>DspEqualization32</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>6</integer>
 							</dict>
@@ -1771,10 +1966,10 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspEqualization32</string>
 								<key>DspFuncInstance</key>
 								<integer>7</integer>
+								<key>DspFuncName</key>
+								<string>DspEqualization32</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>7</integer>
 							</dict>
@@ -2010,20 +2205,20 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspGainStage</string>
 								<key>DspFuncInstance</key>
 								<integer>8</integer>
+								<key>DspFuncName</key>
+								<string>DspGainStage</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>8</integer>
 							</dict>
 							<key>ParameterInfo</key>
 							<dict>
-								<key>3</key>
-								<integer>1067525240</integer>
 								<key>1</key>
 								<integer>0</integer>
 								<key>2</key>
+								<integer>1067525240</integer>
+								<key>3</key>
 								<integer>1067525240</integer>
 							</dict>
 							<key>PatchbayInfo</key>
@@ -2056,20 +2251,20 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
+								<key>DspFuncInstance</key>
+								<integer>9</integer>
 								<key>DspFuncName</key>
 								<string>DspGainStage</string>
-								<key>DspFuncInstance</key>
-								<integer>9</integer>
 								<key>DspFuncProcessingIndex</key>
 								<integer>9</integer>
 							</dict>
 							<key>ParameterInfo</key>
 							<dict>
-								<key>3</key>
-								<integer>1067525240</integer>
 								<key>1</key>
 								<integer>0</integer>
 								<key>2</key>
+								<integer>1067525240</integer>
+								<key>3</key>
 								<integer>1067525240</integer>
 							</dict>
 							<key>PatchbayInfo</key>
@@ -2093,202 +2288,6 @@
 									<integer>1</integer>
 									<key>SourceFuncInstance</key>
 									<integer>6</integer>
-									<key>SourcePortIndex</key>
-									<integer>1</integer>
-								</dict>
-							</dict>
-						</dict>
-						<key>DspFunction10</key>
-						<dict>
-							<key>FunctionInfo</key>
-							<dict>
-								<key>DspFuncName</key>
-								<string>DspSplineLimiter</string>
-								<key>DspFuncInstance</key>
-								<integer>10</integer>
-								<key>DspFuncProcessingIndex</key>
-								<integer>10</integer>
-							</dict>
-							<key>ParameterInfo</key>
-							<dict>
-								<key>7</key>
-								<integer>953267991</integer>
-								<key>3</key>
-								<integer>976715828</integer>
-								<key>4</key>
-								<integer>1035489772</integer>
-								<key>5</key>
-								<integer>0</integer>
-								<key>1</key>
-								<integer>0</integer>
-								<key>6</key>
-								<integer>1092616192</integer>
-								<key>2</key>
-								<integer>0</integer>
-							</dict>
-							<key>PatchbayInfo</key>
-							<dict>
-								<key>InputPort0</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>0</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>8</integer>
-									<key>SourcePortIndex</key>
-									<integer>0</integer>
-								</dict>
-								<key>InputPort1</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>1</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>8</integer>
-									<key>SourcePortIndex</key>
-									<integer>1</integer>
-								</dict>
-							</dict>
-						</dict>
-						<key>DspFunction11</key>
-						<dict>
-							<key>FunctionInfo</key>
-							<dict>
-								<key>DspFuncName</key>
-								<string>DspSplineLimiter</string>
-								<key>DspFuncInstance</key>
-								<integer>11</integer>
-								<key>DspFuncProcessingIndex</key>
-								<integer>11</integer>
-							</dict>
-							<key>ParameterInfo</key>
-							<dict>
-								<key>7</key>
-								<integer>953267991</integer>
-								<key>3</key>
-								<integer>976715828</integer>
-								<key>4</key>
-								<integer>1035489772</integer>
-								<key>5</key>
-								<integer>0</integer>
-								<key>1</key>
-								<integer>0</integer>
-								<key>6</key>
-								<integer>1092616192</integer>
-								<key>2</key>
-								<integer>0</integer>
-							</dict>
-							<key>PatchbayInfo</key>
-							<dict>
-								<key>InputPort0</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>0</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>9</integer>
-									<key>SourcePortIndex</key>
-									<integer>0</integer>
-								</dict>
-								<key>InputPort1</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>1</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>9</integer>
-									<key>SourcePortIndex</key>
-									<integer>1</integer>
-								</dict>
-							</dict>
-						</dict>
-						<key>DspFunction12</key>
-						<dict>
-							<key>FunctionInfo</key>
-							<dict>
-								<key>DspFuncName</key>
-								<string>Dsp3ChOutput</string>
-								<key>DspFuncInstance</key>
-								<integer>12</integer>
-								<key>DspFuncProcessingIndex</key>
-								<integer>12</integer>
-							</dict>
-							<key>ParameterInfo</key>
-							<dict>
-								<key>10</key>
-								<integer>0</integer>
-								<key>2</key>
-								<integer>0</integer>
-								<key>15</key>
-								<integer>0</integer>
-								<key>3</key>
-								<integer>0</integer>
-								<key>11</key>
-								<integer>0</integer>
-								<key>16</key>
-								<integer>0</integer>
-								<key>4</key>
-								<integer>0</integer>
-								<key>12</key>
-								<integer>0</integer>
-								<key>6</key>
-								<integer>0</integer>
-								<key>7</key>
-								<integer>0</integer>
-								<key>8</key>
-								<integer>0</integer>
-								<key>14</key>
-								<integer>0</integer>
-								<key>1</key>
-								<integer>0</integer>
-							</dict>
-							<key>PatchbayInfo</key>
-							<dict>
-								<key>InputPort0</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>0</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>10</integer>
-									<key>SourcePortIndex</key>
-									<integer>0</integer>
-								</dict>
-								<key>InputPort1</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>1</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>10</integer>
-									<key>SourcePortIndex</key>
-									<integer>1</integer>
-								</dict>
-								<key>InputPort2</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>2</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>11</integer>
-									<key>SourcePortIndex</key>
-									<integer>0</integer>
-								</dict>
-								<key>InputPort3</key>
-								<dict>
-									<key>PortInstance</key>
-									<integer>3</integer>
-									<key>PortWidth</key>
-									<integer>1</integer>
-									<key>SourceFuncInstance</key>
-									<integer>11</integer>
 									<key>SourcePortIndex</key>
 									<integer>1</integer>
 								</dict>
@@ -2296,13 +2295,13 @@
 						</dict>
 					</dict>
 				</dict>
-            </dict>
-            <key>LineIn</key>
-            <dict/>
-            <key>Mic</key>
-            <dict>
-                <key>MuteGPIO</key>
-                <integer>1342242829</integer>
+			</dict>
+			<key>LineIn</key>
+			<dict/>
+			<key>Mic</key>
+			<dict>
+				<key>MuteGPIO</key>
+				<integer>1342242829</integer>
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
@@ -2311,10 +2310,10 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspGainStage</string>
 								<key>DspFuncInstance</key>
 								<integer>0</integer>
+								<key>DspFuncName</key>
+								<string>DspGainStage</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>0</integer>
 							</dict>
@@ -2328,54 +2327,31 @@
 								<integer>1078616770</integer>
 							</dict>
 							<key>PatchbayInfo</key>
-							<dict>
-							</dict>
+							<dict/>
 						</dict>
 						<key>DspFunction1</key>
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspNoiseReduction</string>
 								<key>DspFuncInstance</key>
 								<integer>1</integer>
+								<key>DspFuncName</key>
+								<string>DspNoiseReduction</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>1</integer>
 							</dict>
 							<key>ParameterInfo</key>
 							<dict>
-								<key>3</key>
-								<integer>0</integer>
 								<key>1</key>
+								<integer>0</integer>
+								<key>2</key>
+								<integer>1</integer>
+								<key>3</key>
 								<integer>0</integer>
 								<key>4</key>
 								<integer>-1077065615</integer>
-								<key>2</key>
-								<integer>1</integer>
 								<key>5</key>
-								<data>UvaAwuqcX8JkT2TCCqeBwgZAjsJcypbC
-									H0qcwh47n8KhV6HCkF+jwpe0pMLzrqXC
-									Rg2mwmStpcJeeKXCihGnwm5HqMJAsajC
-									ALGowsZXqcI4DqrCqumpwro+qsKG46rC
-									oIurwpYErML78avCiLCrwmz7q8IoSazC
-									+hOswl5ErMLyM6zC+BKswrjjrMJEzq3C
-									RhOuwppursKArq7CYiyvwpqar8LK8a/C
-									Pgqwwraur8I+uK/CThmwwoxusML2sbDC
-									rtOwwvYyscLgVLHCXjOxwkDcsMKo37DC
-									loyxwqAWssIasLHCVv+wwhJ/scLaKbPC
-									GOyzwvLws8J+tbPCspazwojEs8I4hbTC
-									XO20wkLKtMIMUrTCjiW0wmbfs8Iuk7PC
-									GFCzwpSSs8KAQbTCiP+0woBXtcIgoLXC
-									RPi0wr5htMKKabTCPFG1wpxxtsLiBLfC
-									1jS3wpYEt8Jg+bbC1nS3wtq1t8Jc4LfC
-									MBa4wuqPuML82LjC3LS4wnjUuMI2MLnC
-									eIy5woLIucIMPrrC3EK6woSBusI8trrC
-									YvG6wr46u8JQBrvCZsK7wtDOvMJck73C
-									ugW+wqAnv8IepcDC1DvCwhy4w8LCi8XC
-									sIbHwpjIycJIbMzCGOjOwnwCzsKOCc7C
-									strVwrCu3sKoaeXCajbswgao88L2tfzC
-									SbwDwzR9CMPf+xDD
-								</data>
+								<data>UvaAwuqcX8JkT2TCCqeBwgZAjsJcypbCH0qcwh47n8KhV6HCkF+jwpe0pMLzrqXCRg2mwmStpcJeeKXCihGnwm5HqMJAsajCALGowsZXqcI4DqrCqumpwro+qsKG46rCoIurwpYErML78avCiLCrwmz7q8IoSazC+hOswl5ErMLyM6zC+BKswrjjrMJEzq3CRhOuwppursKArq7CYiyvwpqar8LK8a/CPgqwwraur8I+uK/CThmwwoxusML2sbDCrtOwwvYyscLgVLHCXjOxwkDcsMKo37DCloyxwqAWssIasLHCVv+wwhJ/scLaKbPCGOyzwvLws8J+tbPCspazwojEs8I4hbTCXO20wkLKtMIMUrTCjiW0wmbfs8Iuk7PCGFCzwpSSs8KAQbTCiP+0woBXtcIgoLXCRPi0wr5htMKKabTCPFG1wpxxtsLiBLfC1jS3wpYEt8Jg+bbC1nS3wtq1t8Jc4LfCMBa4wuqPuML82LjC3LS4wnjUuMI2MLnCeIy5woLIucIMPrrC3EK6woSBusI8trrCYvG6wr46u8JQBrvCZsK7wtDOvMJck73CugW+wqAnv8IepcDC1DvCwhy4w8LCi8XCsIbHwpjIycJIbMzCGOjOwnwCzsKOCc7CstrVwrCu3sKoaeXCajbswgao88L2tfzCSbwDwzR9CMPf+xDD</data>
 							</dict>
 							<key>PatchbayInfo</key>
 							<dict>
@@ -2407,10 +2383,10 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspEqualization32</string>
 								<key>DspFuncInstance</key>
 								<integer>2</integer>
+								<key>DspFuncName</key>
+								<string>DspEqualization32</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>2</integer>
 							</dict>
@@ -2774,10 +2750,10 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspGainStage</string>
 								<key>DspFuncInstance</key>
 								<integer>3</integer>
+								<key>DspFuncName</key>
+								<string>DspGainStage</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>3</integer>
 							</dict>
@@ -2820,31 +2796,31 @@
 						<dict>
 							<key>FunctionInfo</key>
 							<dict>
-								<key>DspFuncName</key>
-								<string>DspClientGainAdjustStage</string>
 								<key>DspFuncInstance</key>
 								<integer>4</integer>
+								<key>DspFuncName</key>
+								<string>DspClientGainAdjustStage</string>
 								<key>DspFuncProcessingIndex</key>
 								<integer>4</integer>
 							</dict>
 							<key>ParameterInfo</key>
 							<dict>
-								<key>7</key>
-								<integer>2</integer>
+								<key>1</key>
+								<integer>1</integer>
+								<key>2</key>
+								<integer>1091567616</integer>
 								<key>3</key>
 								<integer>-1061158912</integer>
-								<key>8</key>
-								<integer>0</integer>
 								<key>4</key>
 								<integer>1097859072</integer>
 								<key>5</key>
 								<integer>0</integer>
-								<key>1</key>
-								<integer>1</integer>
 								<key>6</key>
 								<integer>1082130432</integer>
-								<key>2</key>
-								<integer>1091567616</integer>
+								<key>7</key>
+								<integer>2</integer>
+								<key>8</key>
+								<integer>0</integer>
 							</dict>
 							<key>PatchbayInfo</key>
 							<dict>
@@ -2874,17 +2850,17 @@
 						</dict>
 					</dict>
 				</dict>
-            </dict>
-            <key>Outputs</key>
-            <array>
-                <string>Headphone</string>
-                <string>IntSpeaker</string>
-                <string>SPDIFOut</string>
-            </array>
-            <key>PathMapID</key>
-            <integer>10</integer>
-            <key>SPDIFOut</key>
-            <dict/>
-        </dict>
-    </array>
+			</dict>
+			<key>Outputs</key>
+			<array>
+				<string>Headphone</string>
+				<string>IntSpeaker</string>
+				<string>SPDIFOut</string>
+			</array>
+			<key>PathMapID</key>
+			<integer>10</integer>
+			<key>SPDIFOut</key>
+			<dict/>
+		</dict>
+	</array>
 </dict>
