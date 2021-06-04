@@ -851,7 +851,7 @@
 		<key>Model</key>
 		<string>Desktop</string>
 		<key>Name</key>
-		<string> Intel NUC8 PCH HD Audio</string>
+		<string>Intel NUC8 PCH HD Audio</string>
 		<key>Patches</key>
 		<array>
 			<dict>
