@@ -19,6 +19,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -29,11 +30,18 @@
 #include "UserKernelShared.h"
 #include "hdaverb.h"
 
-static unsigned execute_command(int dev, uint16_t nid, uint16_t verb, uint16_t param)
+static int compare_path(const void *a, const void *b)
+{
+	return strcmp(a, b);
+}
+
+static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint16_t param, bool verbose)
 {
 	CFMutableDictionaryRef dict = IOServiceMatching(kALCUserClientProvider);
 
 	io_iterator_t iterator;
+	io_string_t *names = NULL;
+	size_t nameCount = 0;
 	kern_return_t kr = IOServiceGetMatchingServices(kIOMasterPortDefault, dict, &iterator);
 	if (kr != KERN_SUCCESS)
 	{
@@ -42,24 +50,72 @@ static unsigned execute_command(int dev, uint16_t nid, uint16_t verb, uint16_t p
 	}
 
 	io_service_t service;
-	do {
-		service = IOIteratorNext(iterator);
-		if (!service)
+	while ((service = IOIteratorNext(iterator)) != 0) {
+		io_string_t *newNames = realloc(names, (nameCount+1) * sizeof(names[0]));
+		if (newNames == NULL)
 		{
-			printf("Could not locate ALCUserClientProvider. Abort.\n");
+			printf("Failed to allocate memory.\n");
+			free(names);
+			IOObjectRelease(iterator);
+			return kIOReturnNoMemory;
+		}
+
+		kr = IORegistryEntryGetPath(service, kIOServicePlane, newNames[nameCount]);
+
+		names = newNames;
+		nameCount++;
+
+		if(kr != kIOReturnSuccess)
+		{
+			printf("Failed to obtain ALC service path: %08x.\n", kr);
+			free(names);
 			IOObjectRelease(iterator);
 			return kIOReturnError;
 		}
-		--dev;
-	} while (dev >= 0);
+	}
 
 	IOObjectRelease(iterator);
+
+	if (nameCount == 0)
+	{
+		printf("Failed to find ALCUserClientProvider services.\n");
+		free(names);
+		return kIOReturnNotFound;
+	}
+
+	qsort(names, nameCount, sizeof(names[0]), compare_path);
+
+	if (verbose)
+	{
+		for (size_t i = 0; i < nameCount; i++)
+		{
+			printf("%zu. %s\n", i, names[i]);
+		}
+	}
+
+	if (nameCount <= dev)
+	{
+		printf("Failed to open ALCUserClientProvider service with specified id %u.\n", dev);
+		free(names);
+		return kIOReturnBadArgument;
+	}
+
+	service = IORegistryEntryFromPath(mach_task_self(), names[dev]);
+	if (service == 0)
+	{
+		printf("Failed to open ALCUserClientProvider service at %s.\n", names[dev]);
+		free(names);
+		return kIOReturnError;
+	}
+
+	free(names);
 
 	io_connect_t dataPort;
 	kr = IOServiceOpen(service, mach_task_self(), 0, &dataPort);
 	if (kr != kIOReturnSuccess)
 	{
 		printf("Failed to open ALCUserClientProvider service: %08x.\n", kr);
+		free(names);
 		return kIOReturnError;
 	}
 
@@ -177,7 +233,7 @@ int main(int argc, char **argv)
 		switch (c)
 		{
 			case 'd':
-				dev = atoi(optarg);
+				dev = (unsigned)atoi(optarg);
 				break;
 			case 'l':
 				list_verbs(0);
@@ -250,7 +306,7 @@ int main(int argc, char **argv)
 		printf("nid = 0x%lx, verb = 0x%lx, param = 0x%lx\n", nid, verb, params);
 	
 	// Execute command
-	uint32_t result = execute_command(dev, nid, verb, params);
+	uint32_t result = execute_command(dev, nid, verb, params, false);
 
 	// Print result
 	printf("0x%08x\n", result);
