@@ -8,6 +8,7 @@ AppleALC Changelog
 - Fixed ALC885's Info.plist Platforms entry
 - Added 400 Series (0xF1C8 Z490 + Intel 11 Gen) PCH HD Audio Controller
 - Fixed `alc-verb` device indexing giving varying results over reboots
+- Added device listing with indices via `-L`/`-l` in `alc-verb`
 
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs

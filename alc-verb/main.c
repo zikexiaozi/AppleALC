@@ -35,7 +35,7 @@ static int compare_path(const void *a, const void *b)
 	return strcmp(a, b);
 }
 
-static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint16_t param, bool verbose)
+static io_string_t *find_services(size_t *count)
 {
 	CFMutableDictionaryRef dict = IOServiceMatching(kALCUserClientProvider);
 
@@ -45,8 +45,8 @@ static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint1
 	kern_return_t kr = IOServiceGetMatchingServices(kIOMasterPortDefault, dict, &iterator);
 	if (kr != KERN_SUCCESS)
 	{
-		printf("Failed to iterate over ALC services: %08x.\n", kr);
-		return kIOReturnError;
+		fprintf(stderr, "Failed to iterate over ALC services: %08x.\n", kr);
+		return NULL;
 	}
 
 	io_service_t service;
@@ -54,10 +54,10 @@ static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint1
 		io_string_t *newNames = realloc(names, (nameCount+1) * sizeof(names[0]));
 		if (newNames == NULL)
 		{
-			printf("Failed to allocate memory.\n");
+			fprintf(stderr, "Failed to allocate memory.\n");
 			free(names);
 			IOObjectRelease(iterator);
-			return kIOReturnNoMemory;
+			return NULL;
 		}
 
 		kr = IORegistryEntryGetPath(service, kIOServicePlane, newNames[nameCount]);
@@ -67,10 +67,10 @@ static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint1
 
 		if(kr != kIOReturnSuccess)
 		{
-			printf("Failed to obtain ALC service path: %08x.\n", kr);
+			fprintf(stderr, "Failed to obtain ALC service path: %08x.\n", kr);
 			free(names);
 			IOObjectRelease(iterator);
-			return kIOReturnError;
+			return NULL;
 		}
 	}
 
@@ -78,32 +78,38 @@ static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint1
 
 	if (nameCount == 0)
 	{
-		printf("Failed to find ALCUserClientProvider services.\n");
+		fprintf(stderr, "Failed to find ALCUserClientProvider services.\n");
 		free(names);
-		return kIOReturnNotFound;
+		return NULL;
 	}
 
 	qsort(names, nameCount, sizeof(names[0]), compare_path);
 
-	if (verbose)
+	*count = nameCount;
+	return names;
+}
+
+static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint16_t param)
+{
+	size_t nameCount = 0;
+	io_string_t *names = find_services(&nameCount);
+
+	if (names == NULL)
 	{
-		for (size_t i = 0; i < nameCount; i++)
-		{
-			printf("%zu. %s\n", i, names[i]);
-		}
+		return kIOReturnError;
 	}
 
 	if (nameCount <= dev)
 	{
-		printf("Failed to open ALCUserClientProvider service with specified id %u.\n", dev);
+		fprintf(stderr, "Failed to open ALCUserClientProvider service with specified id %u.\n", dev);
 		free(names);
 		return kIOReturnBadArgument;
 	}
 
-	service = IORegistryEntryFromPath(mach_task_self(), names[dev]);
+	io_service_t service = IORegistryEntryFromPath(mach_task_self(), names[dev]);
 	if (service == 0)
 	{
-		printf("Failed to open ALCUserClientProvider service at %s.\n", names[dev]);
+		fprintf(stderr, "Failed to open ALCUserClientProvider service at %s.\n", names[dev]);
 		free(names);
 		return kIOReturnError;
 	}
@@ -111,10 +117,10 @@ static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint1
 	free(names);
 
 	io_connect_t dataPort;
-	kr = IOServiceOpen(service, mach_task_self(), 0, &dataPort);
+	kern_return_t kr = IOServiceOpen(service, mach_task_self(), 0, &dataPort);
 	if (kr != kIOReturnSuccess)
 	{
-		printf("Failed to open ALCUserClientProvider service: %08x.\n", kr);
+		fprintf(stderr, "Failed to open ALCUserClientProvider service: %08x.\n", kr);
 		free(names);
 		return kIOReturnError;
 	}
@@ -146,22 +152,22 @@ static void list_keys(struct strtbl *tbl, int one_per_line)
 		
 		if (!one_per_line && c + len >= 80)
 		{
-			fprintf(stderr, "\n");
+			printf("\n");
 			c = 0;
 		}
 		
 		if (one_per_line)
-			fprintf(stderr, "  %s\n", tbl->str);
+			printf("  %s\n", tbl->str);
 		else if (!c)
-			fprintf(stderr, "  %s", tbl->str);
+			printf("  %s", tbl->str);
 		else
-			fprintf(stderr, ", %s", tbl->str);
+			printf(", %s", tbl->str);
 		
 		c += 2 + len;
 	}
 	
 	if (!one_per_line)
-		fprintf(stderr, "\n");
+		printf("\n");
 }
 
 /* look up a value from the given string table */
@@ -204,20 +210,34 @@ static void strtoupper(char *str)
 
 static void usage(void)
 {
-	fprintf(stderr, "alc-verb for AppleALC (based on alsa-tools hda-verb)\n");
-	fprintf(stderr, "usage: alc-verb [option] nid verb param\n");
-	fprintf(stderr, "   -d <int>  Specify device index\n");
-	fprintf(stderr, "   -l        List known verbs and parameters\n");
-	fprintf(stderr, "   -q        Only print errors when executing verbs\n");
-	fprintf(stderr, "   -L        List known verbs and parameters (one per line)\n");
+	printf("alc-verb for AppleALC (based on alsa-tools hda-verb)\n");
+	printf("usage: alc-verb [option] nid verb param\n");
+	printf("   -d <int>  Specify device index\n");
+	printf("   -l        List known verbs and parameters\n");
+	printf("   -q        Only print errors when executing verbs\n");
+	printf("   -L        List known verbs and parameters (one per line)\n");
 }
 
 static void list_verbs(int one_per_line)
 {
-	fprintf(stderr, "known verbs:\n");
+	printf("known verbs:\n");
 	list_keys(hda_verbs, one_per_line);
-	fprintf(stderr, "known parameters:\n");
+	printf("known parameters:\n");
 	list_keys(hda_params, one_per_line);
+	printf("known devices:\n");
+
+	size_t nameCount = 0;
+	io_string_t *names = find_services(&nameCount);
+	if (names == NULL)
+	{
+		return;
+	}
+
+	for (size_t i = 0; i < nameCount; i++)
+	{
+		printf("  %zu. %s\n", i, names[i]);
+	}
+	free(names);
 }
 
 int main(int argc, char **argv)
@@ -306,7 +326,7 @@ int main(int argc, char **argv)
 		printf("nid = 0x%lx, verb = 0x%lx, param = 0x%lx\n", nid, verb, params);
 	
 	// Execute command
-	uint32_t result = execute_command(dev, nid, verb, params, false);
+	uint32_t result = execute_command(dev, nid, verb, params);
 
 	// Print result
 	printf("0x%08x\n", result);
