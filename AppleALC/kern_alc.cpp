@@ -201,6 +201,49 @@ void AlcEnabler::updateProperties() {
 					}
 				}
 			}
+
+			// Check that we allow sending verbs.
+			uint32_t enableHdaVerbs = 0;
+			uint32_t enableAlcDelay = 0;
+			bool checkVerbs = !PE_parse_boot_argn("alcverbs", &enableHdaVerbs, sizeof(enableHdaVerbs));
+			bool checkDelay = !PE_parse_boot_argn("alcdelay", &enableAlcDelay, sizeof(enableAlcDelay));
+
+			if (checkVerbs || checkDelay) {
+				if (devInfo->audioBuiltinAnalog) {
+					if (checkVerbs && devInfo->audioBuiltinAnalog->getProperty("alc-verbs")) {
+						enableHdaVerbs = 1;
+						checkVerbs = false;
+					}
+					if (checkDelay && devInfo->audioBuiltinAnalog->getProperty("alc-delay")) {
+						enableAlcDelay = 1;
+						checkDelay = false;
+					}
+				}
+
+				for (size_t gpu = 0; gpu < devInfo->videoExternal.size(); gpu++) {
+					auto hdaService = devInfo->videoExternal[gpu].audio;
+					if (checkVerbs && hdaService->getProperty("alc-verbs")) {
+						enableHdaVerbs = 1;
+						checkVerbs = false;
+					}
+
+					if (checkDelay && hdaService->getProperty("alc-delay")) {
+						enableAlcDelay = 1;
+						checkDelay = false;
+					}
+				}
+			}
+
+			if (!enableHdaVerbs) {
+				DBGLOG("alc", "no verb support requested, disabling");
+				ADDPR(kextList)[KextIdIOHDAFamily].switchOff();
+			}
+
+			if (enableAlcDelay) {
+				DBGLOG("alc", "has delay support requested, enabling");
+			} else {
+				progressState |= ProcessingState::PatchHDAController;
+			}
 		}
 
 		DeviceInfo::deleter(devInfo);
