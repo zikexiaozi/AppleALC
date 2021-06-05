@@ -37,6 +37,7 @@ struct ControllerModInfo {
 	size_t patchNum;
 };
 
+#ifdef HAVE_ANALOG_AUDIO
 /**
  *  Corresponds to Info.plist resource file of each codec
  */
@@ -72,6 +73,7 @@ struct VendorModInfo {
 	const CodecModInfo *codecs;
 	const size_t codecsNum;
 };
+#endif
 
 /**
  *  Generated resource data
@@ -82,8 +84,10 @@ extern const size_t ADDPR(kextListSize);
 extern ControllerModInfo ADDPR(controllerMod)[];
 extern const size_t ADDPR(controllerModSize);
 
+#ifdef HAVE_ANALOG_AUDIO
 extern VendorModInfo ADDPR(vendorMod)[];
 extern const size_t ADDPR(vendorModSize);
+#endif
 
 extern const size_t KextIdAppleHDAController;
 extern const size_t KextIdAppleHDA;

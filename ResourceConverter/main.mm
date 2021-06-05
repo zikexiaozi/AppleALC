@@ -352,7 +352,9 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 
 static void generateVendors(NSString *file, NSDictionary *vendors, NSString *path, NSDictionary *kextIndexes) {
 	auto vendorSection = [[NSMutableString alloc] initWithUTF8String:"\n// Vendor section\n\n"];
-	
+
+	appendFile(file, @"#ifdef HAVE_ANALOG_AUDIO\n");
+
 	[vendorSection appendString:@"VendorModInfo ADDPR(vendorMod)[] {\n"];
 	
 	for (NSString *dictKey in vendors) {
@@ -365,6 +367,7 @@ static void generateVendors(NSString *file, NSDictionary *vendors, NSString *pat
 	[vendorSection appendString:@"};\n"];
 	[vendorSection appendFormat:@"\nconst size_t ADDPR(vendorModSize) {%lu};\n", [vendors count]];
 	appendFile(file, vendorSection);
+	appendFile(file, @"#endif\n");
 }
 
 int main(int argc, const char * argv[]) {
