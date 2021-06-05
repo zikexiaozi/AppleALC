@@ -302,7 +302,7 @@ static size_t generateCodecs(NSString *file, NSString *vendor, NSString *path, N
 				auto layouts = generateLayouts(file, codecDict, baseDirStr);
 				auto patches = generatePatches(file, [codecDict objectForKey:@"Patches"], kextIndexes);
 			
-				[codecModSection appendFormat:@"\t{ \"%@\", 0x%X, %@, %@, %@, %@ },\n",
+				[codecModSection appendFormat:@"\t{ DEBUG_STRING(\"%@\"), 0x%X, %@, %@, %@, %@ },\n",
 				 [codecDict objectForKey:@"CodecName"],
 				 [[codecDict objectForKey:@"CodecID"] unsignedShortValue],
 				 revs, platforms, layouts, patches
@@ -336,7 +336,7 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 			}
 		}
 				
-		[ctrlModSection appendFormat:@"\t{ \"%@\", 0x%X, 0x%X, %@, %@, %@, %@ },\n",
+		[ctrlModSection appendFormat:@"\t{ DEBUG_STRING(\"%@\"), 0x%X, 0x%X, %@, %@, %@, %@ },\n",
 		 [entry objectForKey:@"Name"],
 		 [[vendors objectForKey:[entry objectForKey:@"Vendor"]] unsignedShortValue],
 		 [[entry objectForKey:@"Device"] unsignedShortValue],
@@ -360,7 +360,7 @@ static void generateVendors(NSString *file, NSDictionary *vendors, NSString *pat
 	for (NSString *dictKey in vendors) {
 		NSNumber *vendorID = [vendors objectForKey:dictKey];
 		size_t num = generateCodecs(file, dictKey, path, kextIndexes);
-		[vendorSection appendFormat:@"\t{ \"%@\", 0x%X, codecMod%@, %zu },\n",
+		[vendorSection appendFormat:@"\t{ DEBUG_STRING(\"%@\"), 0x%X, codecMod%@, %zu },\n",
 			dictKey, [vendorID unsignedShortValue], dictKey, num];
 	}
 	

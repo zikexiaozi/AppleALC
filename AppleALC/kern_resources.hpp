@@ -15,6 +15,12 @@
 #include <sys/types.h>
 #include <stdint.h>
 
+#ifdef DEBUG
+#define DEBUG_STRING(x) (x)
+#else
+#define DEBUG_STRING(x) ""
+#endif
+
 struct KextPatch {
 	KernelPatcher::LookupPatch patch;
 	uint32_t minKernel;
