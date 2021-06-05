@@ -121,7 +121,6 @@ static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint1
 	if (kr != kIOReturnSuccess)
 	{
 		fprintf(stderr, "Failed to open ALCUserClientProvider service: %08x.\n", kr);
-		free(names);
 		return kIOReturnError;
 	}
 
