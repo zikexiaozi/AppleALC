@@ -89,6 +89,42 @@ static io_string_t *find_services(size_t *count)
 	return names;
 }
 
+static io_service_t get_service(const char *name)
+{
+	// FIXME: Quite sure Apple API provides a better solution.
+	CFMutableDictionaryRef dict = IOServiceMatching(kALCUserClientProvider);
+
+	io_iterator_t iterator;
+	kern_return_t kr = IOServiceGetMatchingServices(kIOMasterPortDefault, dict, &iterator);
+	if (kr != KERN_SUCCESS)
+	{
+		fprintf(stderr, "Failed to iterate over ALC services: %08x.\n", kr);
+		return 0;
+	}
+
+	io_service_t service;
+	while ((service = IOIteratorNext(iterator)) != 0) {
+		io_string_t foundName;
+		kr = IORegistryEntryGetPath(service, kIOServicePlane, foundName);
+		if(kr != kIOReturnSuccess)
+		{
+			fprintf(stderr, "Failed to obtain ALC service path: %08x.\n", kr);
+			IOObjectRelease(iterator);
+			return 0;
+		}
+
+		if (strcmp(name, foundName) == 0)
+		{
+			IOObjectRelease(iterator);
+			return service;
+		}
+	}
+
+	IOObjectRelease(iterator);
+	fprintf(stderr, "Failed to find ALCUserClientProvider service %s.\n", name);
+	return 0;
+}
+
 static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint16_t param)
 {
 	size_t nameCount = 0;
@@ -106,14 +142,7 @@ static unsigned execute_command(unsigned dev, uint16_t nid, uint16_t verb, uint1
 		return kIOReturnBadArgument;
 	}
 
-	io_service_t service = IORegistryEntryFromPath(mach_task_self(), names[dev]);
-	if (service == 0)
-	{
-		fprintf(stderr, "Failed to open ALCUserClientProvider service at %s.\n", names[dev]);
-		free(names);
-		return kIOReturnError;
-	}
-
+	io_service_t service = get_service(names[dev]);
 	free(names);
 
 	io_connect_t dataPort;
