@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added device listing with indices via `-L`/`-l` in `alc-verb`
 - Added AppleALCU kext variant for digital-only audio setup
 - Disabled kext patching for verb support and delays when not requested
+- FIxed replace count in `WhiskeyLake` HDA patches
 
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
