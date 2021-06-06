@@ -255,8 +255,8 @@ private:
 		static ControllerInfo *create(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t p, uint32_t lid, IORegistryEntry *d, bool np) {
 			return new ControllerInfo(ven, dev, rev, p, lid, d, np);
 		}
-		static void deleter(ControllerInfo *info) { delete info; }
-		const ControllerModInfo *info {nullptr};
+		static void deleter(ControllerInfo *info) { info->info.deinit(); delete info; }
+		evector<const ControllerModInfo *> info;
 		IORegistryEntry *detect;
 		uint32_t const vendor;
 		uint32_t const device;
