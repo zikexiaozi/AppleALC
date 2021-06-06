@@ -457,17 +457,17 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	
 	if (progressState & ProcessingState::ControllersLoaded) {
 		for (size_t i = 0, num = controllers.size(); i < num; i++) {
-			auto &info = controllers[i]->info;
-			if (info.size() == 0) {
+			auto info = controllers[i]->info;
+			if (!info) {
 				DBGLOG("alc", "missing ControllerModInfo for %lu controller", i);
 				continue;
 			}
 
-			DBGLOG("alc", "handling %lu controller %X:%X with %lu sets, %lu patches - %s", i, info[0]->vendor, info[0]->device, info.size(), info[0]->patchNum, info[0]->name);
+			DBGLOG("alc", "handling %lu controller %X:%X with %lu patches - %s", i, info->vendor, info->device, info->patchNum, info->name);
 			// Choose a free device-id for NVIDIA HDAU to support multigpu setups
-			if (info[0]->vendor == WIOKit::VendorID::NVIDIA) {
-				for (size_t j = 0; j < info[0]->patchNum; j++) {
-					auto &p = info[0]->patches[j].patch;
+			if (info->vendor == WIOKit::VendorID::NVIDIA) {
+				for (size_t j = 0; j < info->patchNum; j++) {
+					auto &p = info->patches[j].patch;
 					if (p.size == sizeof(uint32_t) && *reinterpret_cast<const uint32_t *>(p.find) == NvidiaSpecialFind) {
 						DBGLOG("alc", "finding %08X repl at %lu curr %lu", *reinterpret_cast<const uint32_t *>(p.replace), i, currentFreeNvidiaDeviceId);
 						while (currentFreeNvidiaDeviceId < MaxNvidiaDeviceIds) {
@@ -488,8 +488,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 				DBGLOG("alc", "skipping %lu controller %X:%X:%X due to no-controller-patch", i, controllers[i]->vendor, controllers[i]->device, controllers[i]->revision);
 				continue;
 			}
-			for (size_t i = 0, num = info.size(); i < num; i++)
-				applyPatches(patcher, index, info[i]->patches, info[i]->patchNum);
+			applyPatches(patcher, index, info->patches, info->patchNum);
 		}
 
 		// Only do this if -alcdbg is not passed
@@ -607,7 +606,8 @@ void AlcEnabler::validateControllers() {
 				if (rev != ADDPR(controllerMod)[mod].revisionNum ||
 					ADDPR(controllerMod)[mod].revisionNum == 0) {
 					DBGLOG("alc", "found mod for %lu controller - %s", i, &ADDPR(controllerMod)[mod].name);
-					controllers[i]->info.push_back(&ADDPR(controllerMod)[mod]);
+					controllers[i]->info= &ADDPR(controllerMod)[mod];
+					break;
 				}
 			}
 		}

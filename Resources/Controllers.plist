@@ -841,6 +841,30 @@
 				<key>Replace</key>
 				<data>yJ0AAA==</data>
 			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>6</integer>
+				<key>Find</key>
+				<data>SKMAAA==</data>
+				<key>MinKernel</key>
+				<integer>16</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>yJ0AAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoBIow==</data>
+				<key>MinKernel</key>
+				<integer>16</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoDInQ==</data>
+			</dict>
 		</array>
 		<key>Vendor</key>
 		<string>Intel</string>
@@ -848,6 +872,8 @@
 	<dict>
 		<key>Device</key>
 		<integer>40392</integer>
+		<key>Model</key>
+		<string>Desktop</string>
 		<key>Name</key>
 		<string>Intel NUC8 PCH HD Audio</string>
 		<key>Patches</key>
