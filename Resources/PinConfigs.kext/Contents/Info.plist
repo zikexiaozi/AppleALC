@@ -3504,6 +3504,24 @@
 					<key>CodecID</key>
 					<integer>283902594</integer>
 					<key>Comment</key>
+					<string>ALC282 for TinyMonster ECO by DalianSky</string>
+					<key>ConfigData</key>
+					<data>AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUceAAFHH0ABlxwwAZcdAQGXHqcBlx+QAdccUAHXHZAB1x5GAdcfQAIXHCACFx0QAhceIQIXHwACFwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>21</integer>
+					<key>WakeConfigData</key>
+					<data>AZcHJA==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902594</integer>
+					<key>Comment</key>
 					<string>Custom ALC282 lenovo y430p by loverto</string>
 					<key>ConfigData</key>
 					<data>ASccEAEnHQEBJx6mAScfkAFHHPABRx0AAUcdAAFHH0ABdxzwAXcdAAF3HgABdx9AAYcccAGHHRABhx6BAYcfAQGHHAIBlxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4AAacfQAG3HEABtx0BAbceFwG3H5AB1xzwAdcdAAHXHgAB1x9AAeccYAHnHRAB5x5EAecfAQIXHFACFx0QAhceIQIXHwECFxwC</data>
