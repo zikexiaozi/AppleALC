@@ -13,6 +13,7 @@ AppleALC Changelog
 - Disabled kext patching for verb support and delays when not requested
 - FIxed replace count in `WhiskeyLake` HDA patches
 - Separated Intel `WhiskeyLake` laptop and desktop patches
+- Added ALC1220 layout-id 35 for MSI GP75 9SD by Win7GM
 
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
