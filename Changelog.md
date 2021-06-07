@@ -17,6 +17,7 @@ AppleALC Changelog
 - Added ALC1200 (display as ALCS1200A) layout-id 69 for Asrock Z490M ITX/AC by Lorys89 & Vorshim92
 - Added ALC293 layout-id 30 for HASEE ZX8-CT5DA by RushiaBoingBoing
 - Added ALC255 layout-id 96 for dell 5559 by Bhavin
+- Fix mute on Conxexant CX 20724 by Human7900
 
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
