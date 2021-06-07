@@ -18,6 +18,7 @@ AppleALC Changelog
 - Added ALC293 layout-id 30 for HASEE ZX8-CT5DA by RushiaBoingBoing
 - Added ALC255 layout-id 96 for dell 5559 by Bhavin
 - Fix mute on Conxexant CX 20724 by Human7900
+- Added ALC1220 layout-id 17 for Gigabyte Z490 Vision G manual SP/HP by NIBLIZE
 
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
