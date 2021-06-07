@@ -15,6 +15,7 @@ AppleALC Changelog
 - Separated Intel `WhiskeyLake` laptop and desktop patches
 - Added ALC1220 layout-id 35 for MSI GP75 9SD by Win7GM
 - Added ALC1200 (display as ALCS1200A) layout-id 69 for Asrock Z490M ITX/AC by Lorys89 & Vorshim92
+- Added ALC293 layout-id 30 for HASEE ZX8-CT5DA by RushiaBoingBoing
 
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
