@@ -7116,6 +7116,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
+					<integer>283904768</integer>
+					<key>CodecName</key>
+					<string>Lorys89 and Vorshim92 - ALCS1200A for ASROCK Z490M ITX AC</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfkAFHDAIBhxwgAYcdkAGHHqABhx+QAZccMAGXHZABlx6BAZcfAgGnHEABpx0wAacegQGnHwEBtxxQAbcdQAG3HiEBtx8CAbcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>69</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
 					<integer>283906408</integer>
 					<key>CodecName</key>
 					<string>Toleda -  Realtek ALC S1220A</string>
