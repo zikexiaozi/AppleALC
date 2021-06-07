@@ -19,6 +19,7 @@ AppleALC Changelog
 - Added ALC255 layout-id 96 for dell 5559 by Bhavin
 - Fix mute on Conxexant CX 20724 by Human7900
 - Added ALC1220 layout-id 17 for Gigabyte Z490 Vision G manual SP/HP by NIBLIZE
+- Added ALC255 layout-id 82 for minisforum U820 by daliansky
 
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
