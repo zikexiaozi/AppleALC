@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.6.2
+- Added constants for 12.0 support
+
 #### v1.6.1
 - Fixed broken data in CS4206's layout76.xml
 - Added PathMapID 4206 and 8800 for ALC885's Layout 67 and 73
