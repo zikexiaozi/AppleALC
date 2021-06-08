@@ -1,7 +1,7 @@
 AppleALC Changelog
 ==================
 #### v1.6.2
-- Added constants for 12.0 support
+- Added constants for macOS 12 support
 
 #### v1.6.1
 - Fixed broken data in CS4206's layout76.xml
