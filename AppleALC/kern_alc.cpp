@@ -1127,7 +1127,7 @@ void AlcEnabler::applyPatches(KernelPatcher &patcher, size_t index, const KextPa
 		if (patch.patch.kext->loadIndex == index) {
 			DBGLOG("alc", "checking patch %lu for %lu kext (%s)", p, index, patch.patch.kext->id);
 			if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel)) {
-				DBGLOG("alc", "applying patch %lu  for %lu kext (%s)", p, index, patch.patch.kext->id);
+				DBGLOG("alc", "applying patch %lu for %lu kext (%s)", p, index, patch.patch.kext->id);
 				patcher.applyLookupPatch(&patch.patch);
 				// Do not really care for the errors for now
 				patcher.clearError();
