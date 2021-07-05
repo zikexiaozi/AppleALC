@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added constants for macOS 12 support
 - Added 10.6 and 10.7 support in 64-bit mode
 - Fixed HDMI Audio 0xA171 for Acer VX5-591G by dongcodebmt
+- Added ALC256 layout-id 70 for Hasee KingBook X57S1 by m0d16l14n1
 
 #### v1.6.1
 - Fixed broken data in CS4206's layout76.xml
