@@ -117,7 +117,7 @@ void AlcEnabler::updateProperties() {
 			uint32_t ven = 0;
 			if (WIOKit::getOSDataValue(devInfo->audioBuiltinAnalog, "vendor-id", ven) && ven == WIOKit::VendorID::Intel) {
 				uint32_t updateTcsel = 0;
-				if (!PE_parse_boot_argn("alctcsel", &updateTcsel, sizeof(updateTcsel)) &&
+				if (!lilu_get_boot_args("alctcsel", &updateTcsel, sizeof(updateTcsel)) &&
 					!WIOKit::getOSDataValue(devInfo->audioBuiltinAnalog, "alctcsel", updateTcsel)) {
 					updateTcsel = 0;
 				}
@@ -210,8 +210,8 @@ void AlcEnabler::updateProperties() {
 			// Check that we allow sending verbs.
 			uint32_t enableHdaVerbs = 0;
 			uint32_t enableAlcDelay = 0;
-			bool checkVerbs = !PE_parse_boot_argn("alcverbs", &enableHdaVerbs, sizeof(enableHdaVerbs));
-			bool checkDelay = !PE_parse_boot_argn("alcdelay", &enableAlcDelay, sizeof(enableAlcDelay));
+			bool checkVerbs = !lilu_get_boot_args("alcverbs", &enableHdaVerbs, sizeof(enableHdaVerbs));
+			bool checkDelay = !lilu_get_boot_args("alcdelay", &enableAlcDelay, sizeof(enableAlcDelay));
 
 			if (checkVerbs || checkDelay) {
 				if (devInfo->audioBuiltinAnalog) {
@@ -274,7 +274,7 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 		// alc-layout-id has normal priority and is expected to be used.
 		// layout-id will be used if both alcid and alc-layout-id are not set on non-Apple platforms.
 		uint32_t layout = 0;
-		if (PE_parse_boot_argn("alcid", &layout, sizeof(layout))) {
+		if (lilu_get_boot_args("alcid", &layout, sizeof(layout))) {
 			DBGLOG("alc", "found alc-layout-id override %u", layout);
 			hdaService->setProperty("alc-layout-id", &layout, sizeof(layout));
 		} else {
@@ -361,7 +361,7 @@ IOService *AlcEnabler::gfxProbe(IOService *ctrl, IOService *provider, SInt32 *sc
 bool AlcEnabler::AppleHDAController_start(IOService* service, IOService* provider)
 {
 	uint32_t delay = 0;
-	if (PE_parse_boot_argn("alcdelay", &delay, sizeof(delay))) {
+	if (lilu_get_boot_args("alcdelay", &delay, sizeof(delay))) {
 		DBGLOG("alc", "found alc-delay override %u", delay);
 		provider->setProperty("alc-delay", &delay, sizeof(delay));
 	} else {
