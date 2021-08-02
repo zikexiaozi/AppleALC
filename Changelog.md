@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.6.3
+- Update ALC289 layout-id 87 by GitNaufal
+
 #### v1.6.2
 - Added constants for macOS 12 support
 - Added 10.6 and 10.7 support in 64-bit mode
