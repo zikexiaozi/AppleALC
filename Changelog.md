@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.6.3
 - Update ALC289 layout-id 87 by GitNaufal
+- Update ALC235 layout-id 18 for AsRock 310 BB by viorel78
 
 #### v1.6.2
 - Added constants for macOS 12 support
