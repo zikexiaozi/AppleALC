@@ -209,9 +209,9 @@ private:
 	void patchPinConfig(IOService *hdaCodec, IORegistryEntry *configDevice);
 	
 	/**
-	 *  Hooked initializePinConfig method to preserve AppleHDACodecGeneric instance on 10.4
+	 *  Hooked initializePinConfig method to preserve AppleHDACodecGeneric instance on 10.4 and most versions of 10.5
 	 */
-	static IOReturn initializePinConfigTiger(IOService *hdaCodec);
+	static IOReturn initializePinConfigLegacy(IOService *hdaCodec);
 	
 	/**
 	 *  Hooked initializePinConfig method to preserve AppleHDACodecGeneric instance
@@ -224,9 +224,9 @@ private:
 	mach_vm_address_t orgPerformPowerChange {0};
 	
 	/**
-	 *  AppleHDACodecGeneric::initializePinConfigDefaultFromOverride original method on 10.4
+	 *  AppleHDACodecGeneric::initializePinConfigDefaultFromOverride original method on 10.4 and most versions of 10.5
 	 */
-	mach_vm_address_t orgInitializePinConfigTiger {0};
+	mach_vm_address_t orgInitializePinConfigLegacy {0};
 
 	/**
 	 *  AppleHDACodecGeneric::initializePinConfigDefaultFromOverride original method

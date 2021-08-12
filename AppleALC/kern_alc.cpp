@@ -525,16 +525,20 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	}
 	
 	if ((progressState & ProcessingState::CallbacksWantRouting) && kextIndex == KextIdAppleHDA) {
-		// functions that exist in all versions
-		// initializePinConfigDefaultFromOverride does not take an IOService parameter on 10.4
-		KernelPatcher::RouteRequest requests[] {
-			KernelPatcher::RouteRequest(symPerformPowerChange, performPowerChange, orgPerformPowerChange),
-			getKernelVersion() != KernelVersion::Tiger ?
-				KernelPatcher::RouteRequest("__ZN20AppleHDACodecGeneric38initializePinConfigDefaultFromOverrideEP9IOService", initializePinConfig, orgInitializePinConfig) :
-				KernelPatcher::RouteRequest("__ZN20AppleHDACodecGeneric38initializePinConfigDefaultFromOverrideEv", initializePinConfigTiger, orgInitializePinConfigTiger)
-		};
-		patcher.routeMultiple(index, requests, address, size);
+		// AppleHDADriver::performPowerStateChange
+		KernelPatcher::RouteRequest requestPowerChange(symPerformPowerChange, performPowerChange, orgPerformPowerChange);
+		patcher.routeMultiple(index, &requestPowerChange, 1, address, size);
 		
+		// AppleHDACodecGeneric::initializePinConfigDefaultFromOverride does not take an IOService parameter in most versions of 10.5 and under.
+		if (getKernelVersion() >= KernelVersion::SnowLeopard
+				|| patcher.solveSymbol(index, "__ZN20AppleHDACodecGeneric38initializePinConfigDefaultFromOverrideEP9IOService")) {
+			KernelPatcher::RouteRequest requestPinConfig("__ZN20AppleHDACodecGeneric38initializePinConfigDefaultFromOverrideEP9IOService", initializePinConfig, orgInitializePinConfig);
+			patcher.routeMultiple(index, &requestPinConfig, 1, address, size);
+		} else {
+			patcher.clearError();
+			KernelPatcher::RouteRequest requestPinConfig("__ZN20AppleHDACodecGeneric38initializePinConfigDefaultFromOverrideEv", initializePinConfigLegacy, orgInitializePinConfigLegacy);
+			patcher.routeMultiple(index, &requestPinConfig, 1, address, size);
+		}
 		
 		// layout and platform load callbacks only exist in 10.6.8 and later
 		if (patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv")) {
@@ -815,7 +819,7 @@ void AlcEnabler::patchPinConfig(IOService *hdaCodec, IORegistryEntry *configDevi
 	}
 }
 
-IOReturn AlcEnabler::initializePinConfigTiger(IOService *hdaCodec) {
+IOReturn AlcEnabler::initializePinConfigLegacy(IOService *hdaCodec) {
 	auto parentDevice = hdaCodec->getParentEntry(gIOServicePlane);
 	while (parentDevice) {
 		auto name = parentDevice->getName();
@@ -830,7 +834,7 @@ IOReturn AlcEnabler::initializePinConfigTiger(IOService *hdaCodec) {
 		callbackAlc->patchPinConfig(hdaCodec, parentDevice);
 	else
 		SYSLOG("alc", "failed to get parent AppleHDAController instance");
-	return FunctionCast(initializePinConfigTiger, callbackAlc->orgInitializePinConfigTiger)(hdaCodec);
+	return FunctionCast(initializePinConfigLegacy, callbackAlc->orgInitializePinConfigLegacy)(hdaCodec);
 }
 
 IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configDevice) {
