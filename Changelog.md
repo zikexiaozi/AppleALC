@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added STAC9205 layout-id 11 for Dell Inspiron 1520 and Latitude D630
 - Fixed crash on GPUs without digital audio support introduced in 1.6.1
 - Added ALC623 layout-id 2A1 for Lenovo M70T by Andres ZeroCross
+- Seperated Laptop/Desktop patches for 8086:A171 to fix HDMI audio on Intel NUC
 
 #### v1.6.3
 - Update ALC289 layout-id 87 by GitNaufal
