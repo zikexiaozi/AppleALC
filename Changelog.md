@@ -13,6 +13,7 @@ AppleALC Changelog
 - Added ALC235 layout-id 8 for Intel NUC 8 by wern-apfel
 - Added ALC269 layout-id 69 for MSI GF63 Thin 9SEXR  by Vorshim92
 - Added ALC289 layout-id 93 for XPS 9500 4k by sweet3c
+- Added ALC892 layout-id 32 for custom G4/G5mod
 
 #### v1.6.3
 - Update ALC289 layout-id 87 by GitNaufal
