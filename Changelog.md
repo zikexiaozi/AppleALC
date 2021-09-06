@@ -7,7 +7,10 @@ AppleALC Changelog
 - Fixed crash on GPUs without digital audio support introduced in 1.6.1
 - Added ALC623 layout-id 21 for Lenovo M70T by Andres ZeroCross
 - Seperated Laptop/Desktop patches for 8086:A171 to fix HDMI audio on Intel NUC
-- Add ALC236 layout-id 36 for Lenovo Ideapad 510s 14isk by volcbs
+- Added ALC236 layout-id 36 for Lenovo Ideapad 510s 14isk by volcbs
+- Added ALC235 layout-id 12 for Dell Optiplex 7040 MT
+- Improved CA0132 layout-id 7 by removing not needed MuteGPIO
+- Added ALC235 layout-id 8 for Intel NUC 8
 
 #### v1.6.3
 - Update ALC289 layout-id 87 by GitNaufal
