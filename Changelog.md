@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 99 for XiaoMiPro 2020 by htmambo
 - Added ALC897 Layout-id 23 for Chuwi-CoreBookX14 by weachy
 - Added ALC256 layout-id 20 for Asus AIO PC V222UAK-WA541T by andreszerocross
+- Added ALC236 layout-id 23 for Lenovo Air 13 IML(S530-13IML) by JudySL
 
 #### v1.6.4
 - Added 10.4 and 10.5 support, and 10.6 and 10.7 support in 32-bit mode
