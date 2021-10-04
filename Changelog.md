@@ -4,6 +4,8 @@ AppleALC Changelog
 - Added ALC236 for Lenovo IdeaPad 330S-14IKB by Ab2774
 - Some updates and revisions for ALC236 LayoutID 36 by volcbs
 - Added ALC897 for GIGABYTE Z590 Gaming X by Sergey_Galan 
+- Added ALC294 layout-id 99 for ASUS ROG GU502LV by htmambo
+- Added ALC256 layout-id 99 for XiaoMiPro 2020 by htmambo
 
 
 #### v1.6.4
