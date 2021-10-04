@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC294 layout-id 99 for ASUS ROG GU502LV by htmambo
 - Added ALC256 layout-id 99 for XiaoMiPro 2020 by htmambo
 - Added ALC897 Layout-id 23 for Chuwi-CoreBookX14 by weachy
+- Added ALC256 layout-id 20 for Asus AIO PC V222UAK-WA541T by andreszerocross
 
 #### v1.6.4
 - Added 10.4 and 10.5 support, and 10.6 and 10.7 support in 32-bit mode
