@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.6.5
 - Added ALC236 for Lenovo IdeaPad 330S-14IKB by Ab2774
 - Some updates and revisions for ALC236 LayoutID 36 by volcbs
+- Added ALC897 for GIGABYTE Z590 Gaming X by Sergey_Galan 
 
 
 #### v1.6.4
