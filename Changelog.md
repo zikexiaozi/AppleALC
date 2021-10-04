@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.6.5
+- Added ALC236 for Lenovo IdeaPad 330S-14IKB by Ab2774
+
+
 #### v1.6.4
 - Added 10.4 and 10.5 support, and 10.6 and 10.7 support in 32-bit mode
 - Update STAC9200 layout-id 11 to support 10.4 to 10.6
