@@ -1,12 +1,16 @@
 AppleALC Changelog
 ==================
+#### v1.6.6
+- Added ALC256 layout-id 24 for Intel NUC NUC10i5FNH by Andres ZeroCross
+
+
 #### v1.6.5
 - Added ALC236 for Lenovo IdeaPad 330S-14IKB by Ab2774
 - Some updates and revisions for ALC236 LayoutID 36 by volcbs
 - Added ALC897 for GIGABYTE Z590 Gaming X by Sergey_Galan 
 - Added ALC294 layout-id 99 for ASUS ROG GU502LV by htmambo
 - Added ALC256 layout-id 99 for XiaoMiPro 2020 by htmambo
-- Added ALC897 Layout-id 23 for Chuwi-CoreBookX14 by weachy
+- Added ALC897 layout-id 23 for Chuwi-CoreBookX14 by weachy
 - Added ALC256 layout-id 20 for Asus AIO PC V222UAK-WA541T by andreszerocross
 - Added ALC236 layout-id 23 for Lenovo Air 13 IML(S530-13IML) by JudySL
 
