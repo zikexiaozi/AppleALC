@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added Conexant CX11970 (CX8400) layout-id 13 for Acer Swift 3 SF31* (Ice Lake) by m0d16l14n1
 - Added ALCS1200A layout-id 7 for B550M Gaming Carbon WIFI by Kila2
 - Try to solve wake up mute for GP75 9SD by Win7GM
+- Added ALC256 layout-id 33 for Huawei Matebook D15 MRC-W10 by im1ke
 
 
 #### v1.6.5
