@@ -6480,7 +6480,7 @@
 					<key>WakeConfigData</key>
 					<data>AUcMAg==</data>
 					<key>WakeVerbReinit</key>
-					<true/>		
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
