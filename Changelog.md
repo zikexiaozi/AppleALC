@@ -7,6 +7,7 @@ AppleALC Changelog
 - Try to solve wake up mute for GP75 9SD by Win7GM
 - Added ALC256 layout-id 33 for Huawei Matebook D15 MRC-W10 by im1ke
 - Added ALC892 layout-id 23 for ASRock B365 Pro4 by TheHackGuy
+- Fixed ALC221 layout-id 11 for HP6300/8300 rear line-in jack by adding DSP functions by aloha-cn
 
 
 #### v1.6.5
