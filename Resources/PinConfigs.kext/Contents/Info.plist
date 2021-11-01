@@ -2021,6 +2021,24 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>Comment</key>
+					<string>insanelyme - ALC256 for Huawei Matebook D15 2018 (MRC-W10)</string>
+					<key>ConfigData</key>
+					<data>ASccMAEnHQEBJx6mAScfkAE3HPABNx0AATceAAE3H0ABRxwRAUcdAQFHHhcBRx+QAUcMAgGHHPABhx0AAYceAAGHH0ABlxxAAZcdEAGXHoEBlx8EAacc8AGnHQABpx4AAacfQAG3HBABtx0BAbceFwG3H5ABtwwCAdcc8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0ACFxwgAhcdEAIXHiECFx8EAhcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>33</integer>
+					<key>WakeConfigData</key>
+					<data>AbcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>DalianSky - Realtek ALC256 (3246) for Dell 7000 Series</string>
 					<key>CodecID</key>
