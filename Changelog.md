@@ -12,6 +12,7 @@ AppleALC Changelog
 - Fix ALC256 layout-id 67 unable to change the built-in Speaker Volume through the hotkey after unplugging the headphone by @R-a-s-c-a-l
 - Fix ALC298 layout-id 11 wake data for Alienware 17 R4 by RockJesus
 - Added ALC282 layout-id 30 for Soarsea S210H by Jokerman1991
+- Added ALC662 layout-id 19 for MSI X79A-GD65 by @wy414012
 
 #### v1.6.6
 - Added ALC256 layout-id 24 for Intel NUC NUC10i5FNH by Andres ZeroCross
