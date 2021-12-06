@@ -9130,6 +9130,24 @@
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek ALC285 for Yoga S740 14IIL by frozenzero123</string>
+					<key>CodecID</key>
+					<integer>283902597</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQEBRx4TAUcfkgFHDAICFxwgAhcdEAIXHgECFx8DAhcMAgGXHEABlx0QAZcegQGXHwM=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>88</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleALC</string>
