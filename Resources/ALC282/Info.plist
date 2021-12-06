@@ -14,6 +14,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>Custom ALC282 Lenovo-IdeaPad-Z510 by hoseinrez</string>
+				<key>Id</key>
+				<integer>69</integer>
+				<key>Path</key>
+				<string>layout69.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Mirone Laptop patch ALC282 v1</string>
 				<key>Id</key>
 				<integer>3</integer>
@@ -127,6 +135,14 @@
 		</array>
 		<key>Platforms</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Custom ALC282 Lenovo-IdeaPad-Z510 by hoseinrez</string>
+				<key>Id</key>
+				<integer>69</integer>
+				<key>Path</key>
+				<string>Platforms69.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Mirone resources</string>
