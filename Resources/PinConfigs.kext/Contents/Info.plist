@@ -2904,6 +2904,24 @@
 					<key>CodecID</key>
 					<integer>283902569</integer>
 					<key>Comment</key>
+					<string>Custom ALC269-VC Samsung np540U4E by majonez</string>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQABJx6mAScfkAG3HCABtx0AAbceFwG3H5ABVxwwAVcdEAFXHiEBVx8AAYccQAGHHZABhx6BAYcfAgG3DAIBVwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>34</integer>
+					<key>WakeConfigData</key>
+					<data>AVcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>Comment</key>
 					<string>Custom ALC269 Samsung np880z5e-x01ru by Constanta</string>
 					<key>ConfigData</key>
 					<data>ASccEAEnHQABJx6mAScfkAG3HCABtx0AAbceFwG3H5ABVxwwAVcdEAFXHiEBVx8AAYccQAGHHZABhx6BAYcfAgG3DAI=</data>
