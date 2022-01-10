@@ -9192,6 +9192,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom ALC897 by Sergey_Galan  for GIGABYTE Z590M</string>
+					<key>CodecID</key>
+					<integer>283904151</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfAQFHDAIBVxzwAVcdAAFXHgABVx9AAWcc8AFnHQABZx4AAWcfQAF3HPABdx0AAXceAAF3H0ABhxxAAYcdkAGHHqABhx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0wAacegQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcMAgEXHJABFx1hARceSwEXHwEB9xzwAfcdAAH3HgAB9x9AAecc8AHnHQAB5x4AAecfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Conexant CX11970 (CX8400) for Acer Swift 3 SF313 (Ice Lake) by b0ltun</string>
 					<key>CodecID</key>
 					<integer>351346896</integer>
