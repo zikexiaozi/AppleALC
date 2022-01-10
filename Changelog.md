@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.6.8
 - Replace patch for 500 Series(0x43C8) PCH HD Audio
 - Added ALC269-VC for Samsung NP540U4E #752 by @majonez
+- Added ALC1220A layout 8 for MSI z490i unify by @viorel78
 
 #### v1.6.7
 - Added 600-series controller patch by @R-a-s-c-a-l
