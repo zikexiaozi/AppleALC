@@ -4808,6 +4808,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>narcyzzo - Realtek ALC294 for ASUS UX534FAC</string>
+					<key>CodecID</key>
+					<integer>283902612</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6gAScfkAF3HCABdx0BAXceEwF3H5ABdwwCAZccMAGXHRABlx6BAZcfBAIXHEACFx0QAhceIQIXHwQCFwwCAgUADwIEd3QCBQBFAgRSiQIFABACBAQgAgUAGwIETks=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>44</integer>
+					<key>WakeConfigData</key>
+					<data>AXcMAgIXDAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>KKKIIINNN - ALC294 ASUS X542UQR</string>
 					<key>CodecID</key>
 					<integer>283902612</integer>
