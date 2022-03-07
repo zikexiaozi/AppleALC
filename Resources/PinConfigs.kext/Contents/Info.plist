@@ -3550,6 +3550,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Harahi - Realtek ALC274 for Mechrevo UmiPro3 (Tongfang GM5MG0Y)</string>
+					<key>CodecID</key>
+					<integer>283902580</integer>
+					<key>ConfigData</key>
+					<data>ASccMAEnHQEBJx6mAScfkAE3HPABNx0AATceAAE3H0ABRxzwAUcdAAFHHgABRx9AAVcc8AFXHQABVx4AAVcfQAFnHPABZx0AAWceAAFnH0ABdxwQAXcdAQF3HhcBdx+QAXcMAgGHHPABhx0AAYceAAGHH0ABlxxAAZcdEAGXHqEBlx8CAacc8AGnHQABpx4AAacfQAG3HPABtx0AAbceAAG3H0AB1xzwAdcdAAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAH3HPAB9x0AAfceAAH3H0ACFxwgAhcdEAIXHiECFx8CAhcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>39</integer>
+					<key>WakeConfigData</key>
+					<data>AXcMAgIXDAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC275</string>
 					<key>CodecID</key>
 					<integer>283902581</integer>
