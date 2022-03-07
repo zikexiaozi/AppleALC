@@ -3,7 +3,8 @@ AppleALC Changelog
 #### v1.7.0
 - Fix headphones after sleep on Latitude 7390 2-in-1 (ALC225 layout 30)
 - Added `dump_coeff.sh` script in `Tools` to dump processing caps under macOS, plus docs in Wiki
-- Added MSI Modern 15 A10M ALC235 layout 29 by hla63
+- Added MSI Modern 15 A10M ALC235 layout 29 by @hla63
+- Added ALC269 layout-id 26 for Infinix INBook X1 XL11 by @andreszerocross
 
 #### v1.6.9
 - Added 0x100003 revision for ALCS1220A
