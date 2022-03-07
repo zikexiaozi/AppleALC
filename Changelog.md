@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added MSI Modern 15 A10M ALC235 layout 29 by @hla63
 - Added ALC269 layout-id 26 for Infinix INBook X1 XL11 by @andreszerocross
 - Added layout-id 39 for Realtek ALC274 - Mechrevo UmiPro3 (Tongfang GM5MG0Y) by @harahi
+- Added layout-id 96 for Realtek ALC257 - Lenovo Thinkpad L390 by @antoniomcr96
 
 #### v1.6.9
 - Added 0x100003 revision for ALCS1220A
