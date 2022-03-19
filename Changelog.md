@@ -1,6 +1,6 @@
 AppleALC Changelog
 ==================
-#### v1.7.0
+#### v1.7.1
 - Fixed wrong file name in ALC 287 info.plist
 
 #### v1.7.0
