@@ -1,7 +1,7 @@
 AppleALC Changelog
 ==================
 #### v1.7.1
-- Fixed wrong file name in ALC 287 info.plist
+- Fixed wrong file name in ALC287 info.plist
 
 #### v1.7.0
 - Fix headphones after sleep on Latitude 7390 2-in-1 (ALC225 layout 30)
