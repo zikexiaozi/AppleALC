@@ -9366,6 +9366,24 @@
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek ALC235 for Lenovo M920x by meloay</string>
+					<key>CodecID</key>
+					<integer>283902517</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQEBRx4XAUcfkAF3HPABdx0AAXceAAF3H0ABhxzwAYcdAAGHHgABhx9AAZcccAGXHRABlx6hAZcfAgGnHCABpx0QAacegQGnHwIBtxyAAbcdEAG3HgEBtx8BAdcc8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0ACFxxQAhcdEAIXHiECFx8CAUcMAgG3DAICFwwCAhcHwAIXCIIBlwck</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>72</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAICFwwCAhcHwAIXCIIBlwck</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleALC</string>
