@@ -3,6 +3,11 @@ AppleALC Changelog
 #### v1.7.1
 - Fixed EAPD for layout 28 ALC269 by @samcabral
 - Fixed wrong file name in ALC287 info.plist
+- Added dump for ALC225 layout 30 by @usr-sse2
+- Added Lenovo M920x for ALC235 LayoutID=72 by @meloay
+- Fixed ALC298 layout-id 11 for Alienware 17 R4 2.1ch by @Rockjesus.cn
+- Fixed MSI MPG Z490 Gaming Plus Sound issue after booting from Windows by @JanoMorano
+- Added NUC8I5BEH JUST MIC layout-id 88 by @frozenzero123
 
 #### v1.7.0
 - Fix headphones after sleep on Latitude 7390 2-in-1 (ALC225 layout 30)
