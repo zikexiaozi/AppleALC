@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.7.2
+- Added layout-id 97 ALC257 for Lenovo Thinkpad T490 by @savvamitrofanov
+
 #### v1.7.1
 - Fixed EAPD for layout 28 ALC269 by @samcabral
 - Fixed wrong file name in ALC287 info.plist
