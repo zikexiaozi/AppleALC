@@ -3,6 +3,9 @@ AppleALC Changelog
 #### v1.7.2
 - Added layout-id 97 ALC257 for Lenovo Thinkpad T490 by @savvamitrofanov
 - Update controller patch for 400 series 0x06C8 to fix HDMI audio by @Core-i99
+- Added ALC255(3234) layout-id 255  for Dell Inspiron 5548 by CynCYX
+- Added ALC897 layout-id 77 for ONDA H510 IPC by LewandowskiZ
+- Fix Legion Y9000X 2020 Speaker Mute disabled issue by SukkaW
 
 #### v1.7.1
 - Fixed EAPD for layout 28 ALC269 by @samcabral
