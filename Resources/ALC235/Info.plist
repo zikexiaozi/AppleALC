@@ -46,6 +46,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Deskmini H470 ALC235 by dumk1217</string>
+				<key>Id</key>
+				<integer>13</integer>
+				<key>Path</key>
+				<string>layout13.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>the-braveknight - Realtek ALC235 for Lenovo Legion Y520</string>
 				<key>Id</key>
 				<integer>14</integer>
@@ -142,22 +150,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ALC235 for Lenovo TianYi 510s Mini by DalianSky</string>
-				<key>Id</key>
-				<integer>99</integer>
-				<key>Path</key>
-				<string>layout99.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Deskmini H470 ALC235 by dumk1217</string>
-				<key>Id</key>
-				<integer>13</integer>
-				<key>Path</key>
-				<string>layout13.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Lenovo M920x ALC235 by meloay</string>
 				<key>Id</key>
 				<integer>72</integer>
@@ -171,6 +163,14 @@
 				<integer>88</integer>
 				<key>Path</key>
 				<string>layout88.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ALC235 for Lenovo TianYi 510s Mini by DalianSky</string>
+				<key>Id</key>
+				<integer>99</integer>
+				<key>Path</key>
+				<string>layout99.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
@@ -206,6 +206,14 @@
 				<integer>12</integer>
 				<key>Path</key>
 				<string>Platforms12.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Deskmini H470 ALC235 by dumk1217</string>
+				<key>Id</key>
+				<integer>13</integer>
+				<key>Path</key>
+				<string>Platforms13.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -305,22 +313,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ALC235 for Lenovo TianYi 510s Mini by DalianSky</string>
-				<key>Id</key>
-				<integer>99</integer>
-				<key>Path</key>
-				<string>Platforms99.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Deskmini H470 ALC235 by dumk1217</string>
-				<key>Id</key>
-				<integer>13</integer>
-				<key>Path</key>
-				<string>Platforms13.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Lenovo M920x ALC235 by meloay</string>
 				<key>Id</key>
 				<integer>72</integer>
@@ -334,6 +326,14 @@
 				<integer>88</integer>
 				<key>Path</key>
 				<string>Platforms88.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ALC235 for Lenovo TianYi 510s Mini by DalianSky</string>
+				<key>Id</key>
+				<integer>99</integer>
+				<key>Path</key>
+				<string>Platforms99.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
