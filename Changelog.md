@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.7.3
 - Added constants for macOS 13 support
 - Fix sleep breaking earphone support on ALC295 layout-id 13 by Mahas1
+- Fixed NUC8I5BEH JUST MIC ALC235 layout-id 88 by @frozenzero123
 
 #### v1.7.2
 - Added layout-id 97 ALC257 for Lenovo Thinkpad T490 by @savvamitrofanov
