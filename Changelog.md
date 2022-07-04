@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added new codec revision-id 0x100500 for ALC897 by R-a-s-c-a-l
 - Added ALC294 layout-id 15 for Zenbook UX434 by wern-apfel
 - Added ALC287 layout-id 21 for Lenovo Yoga Slim 7-14IIL05 by Andres ZeroCross
+- Added ALC280 layout-id 18 for Dell OptiPlex 9020 AIO ALC280 by james090500
 
 #### v1.7.2
 - Added layout-id 97 ALC257 for Lenovo Thinkpad T490 by @savvamitrofanov
