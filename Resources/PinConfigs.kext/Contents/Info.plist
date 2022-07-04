@@ -9548,7 +9548,7 @@
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
-          <key>AFGLowPowerState</key>
+					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>5T33Z0 - Lenoco T530 with Dock 4337/4338</string>
