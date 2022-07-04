@@ -9534,6 +9534,23 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>james090500 - Dell OptiPlex 9020 AIO</string>
+					<key>CodecID</key>
+					<integer>283902592</integer>
+					<key>ConfigData</key>
+					<data>AVccYAFXHRABVx4hAVcfAQFXDAIBtxxQAbcdAAG3HhcBtx+QASccMAEnHQABJx6gAScfkAGnHEABpx0QAacegQGnHwI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>18</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+          <key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>5T33Z0 - Lenoco T530 with Dock 4337/4338</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>
