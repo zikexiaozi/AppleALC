@@ -4902,13 +4902,13 @@
 					<key>CodecID</key>
 					<integer>283902612</integer>
 					<key>ConfigData</key>
-					<data>AgUAGwIETksCBQBFAgRSiQGXHEABlx0QAZcegQGXHwE=</data>
+					<data>AgUAGwIETksCBQBFAgRSiQGXHEABlx0QAZcepwGXHwA=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>15</integer>
 					<key>WakeConfigData</key>
-					<data>AXcMAg==</data>
+					<data>AXcMAgGXByQ=</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
