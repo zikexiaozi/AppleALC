@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.7.4
+- ALC294 layout-id 15 corrected incorrect pinconfig by wern-apfel
+- Added ALC1220 layout-id 25 for MSI GE73 Raider RGB 8RF by Ardhi9696
+
 #### v1.7.3
 - Added constants for macOS 13 support
 - Fix sleep breaking earphone support on ALC295 layout-id 13 by Mahas1
