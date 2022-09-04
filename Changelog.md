@@ -1,5 +1,10 @@
 AppleALC Changelog
 ==================
+#### v1.7.5
+- Added ALC222 layout-id 12 for Lenovo Tianyi 510s-07IMB Desktop PC by hgsshaanxi
+- Added ALC235 layout-id 36 for Lenovo Tianyi 510 pro-18ICB Desktop PC by hgsshaanxi
+- Added ALC255(3234) layout-id 22 for Asus N752VX by Feartech by feartech
+
 #### v1.7.4
 - ALC294 layout-id 15 corrected incorrect pinconfig by wern-apfel
 - Added ALC1220 layout-id 25 for MSI GE73 Raider RGB 8RF by Ardhi9696
