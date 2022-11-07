@@ -1,5 +1,11 @@
 AppleALC Changelog
 ==================
+#### v1.7.6
+- Added ALC298 layout-id 33 for surface laptop 1gen by Rockjesus.cn
+- Added ALC255 layout-id 23for Acer Aspire A515-54G by anderson-suga
+- Added ALC897 combo jack mic layout-id 22 for CHUWI CoreBook X by mishurov
+- Added ALC897 layout-id 21 for OPS Computer by Andres ZeroCross
+
 #### v1.7.5
 - Added ALC222 layout-id 12 for Lenovo Tianyi 510s-07IMB Desktop PC by hgsshaanxi
 - Added ALC235 layout-id 36 for Lenovo Tianyi 510 pro-18ICB Desktop PC by hgsshaanxi
