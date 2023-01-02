@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.7.8
+- Added ALC255 layout-id 69 for Acer Aspire 3 A315-56-327T by juniorcaesar
+
 #### v1.7.7
 - Added ALC256 layout-id 68 for nuc9 by littlesum
 
