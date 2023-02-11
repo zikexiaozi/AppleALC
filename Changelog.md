@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.7.9
+- Added ALC268 layout-id 11 for Dell Inspiron Mini 9 by Goldfish64
+- Added ALC268 support for 10.5 and 10.6
+
 #### v1.7.8
 - Added ALC255 layout-id 69 for Acer Aspire 3 A315-56-327T by juniorcaesar
 - Added ALC1220 layout-id 20 for Gigabyte B550 Vision D by CaseySJ
