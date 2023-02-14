@@ -3,6 +3,15 @@ AppleALC Changelog
 #### v1.7.9
 - Added ALC268 layout-id 11 for Dell Inspiron Mini 9 by Goldfish64
 - Added ALC268 support for 10.5 and 10.6
+- Fix 583 pinconfig for nuc9 by littlesum
+- ALC255 layout-id 22 Mic Fix by Feartech
+- ALC255 layout-id 69 ConfigData Fix by juniorcaesar
+- Added ALC256 layout-id 12 for DELL Vostro 5468 ALC256 (3246) by MumetNgoding
+- Update ALC892 layout-id 100 for MSI-Z370-A-PRO by megabes
+- Update ALCS1200A layout-id 51 for ASRock-Z490-Steel-Legend by megabes
+- Added ALC897 layout-id 13 for MSI-Z590-A-PRO by megabes
+- Added ALCS1200A layout-id 52 for MSI-MORTAR-B460M by megabes
+- Add Layout 21 for CX 8070 for Lenovo ThinkPad E14 by andreszerocross
 
 #### v1.7.8
 - Added ALC255 layout-id 69 for Acer Aspire 3 A315-56-327T by juniorcaesar
