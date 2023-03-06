@@ -2,6 +2,8 @@ AppleALC Changelog
 ==================
 #### v1.8.0
 - Fixed ALC274 layout-id 28 in/out 3.5mm jacks audio by Tweakkinn
+- Added ALC256 layout-id 95 for Honor MagicBook Pro HBB-WAH9 by Floron
+- Added ALC236 layout-id 55 for HP-240G8 by 8DireZ3
 
 #### v1.7.9
 - Added ALC268 layout-id 11 for Dell Inspiron Mini 9 by Goldfish64
