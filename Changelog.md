@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.8.0
+- Fixed ALC274 layout-id 28 in/out 3.5mm jacks audio by Tweakkinn
+
 #### v1.7.9
 - Added ALC268 layout-id 11 for Dell Inspiron Mini 9 by Goldfish64
 - Added ALC268 support for 10.5 and 10.6
