@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.8.3
+- Added layout-id 73 for the ALC283/ThinkCentre M73 Tiny by UHDbits
+
 #### v1.8.2
 - Added ALC1220 layout-id 18 for Gigabyte Z490 Aorus Master by hgsshaanxi
 - Fixed LayoutId 21 for ALC298 on X270 by MKjanek32
