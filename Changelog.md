@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.8.5
+- Added AD1884 layout-id 11 for Panasonic Toughbook CF-30 by Goldfish64
+
 #### v1.8.4
 - Added ALC262 layout-id 14 for Dell Studio One 19 1909 by Goldfish64
 - Headphones Fix ALC255 layout-id 69 by juniorcaesar 
