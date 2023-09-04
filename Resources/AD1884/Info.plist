@@ -123,6 +123,22 @@
 			<key>Replace</key>
 			<data>hBjUEQ==</data>
 		</dict>
+		<dict>
+			<key>Comment</key>
+			<string>32-bit branch correction</string>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>gxnUEQ==</data>
+			<key>MaxKernel</key>
+			<integer>12</integer>
+			<key>MinKernel</key>
+			<integer>11</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>gxjUEQ==</data>
+		</dict>
 	</array>
 	<key>Vendor</key>
 	<string>AnalogDevices</string>
