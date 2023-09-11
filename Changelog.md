@@ -2,6 +2,8 @@ AppleALC Changelog
 ==================
 #### v1.8.5
 - Added AD1884 layout-id 11 for Panasonic Toughbook CF-30 by Goldfish64
+- Added ALC897 layout-id 99 for HUANANZHI QD4 by vinitosh
+- Added ALC897 layout-id 99 for MSI PRO B760M-P by liangyi9812
 
 #### v1.8.4
 - Added ALC262 layout-id 14 for Dell Studio One 19 1909 by Goldfish64
