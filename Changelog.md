@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.8.7
+- Added IDT 92HD81B1X5 layout-ID 76 for HP Elitebook 8x70 series by SkyrilHD
+- Fixed ALC256 layout-ID 68  for NUC 9 by littlesum 
+
 #### v1.8.6
 - Fixed layout55 ALC236 for HP240G8 by 8DireZ3
 - Added ALC269 layout-id 138 for Lenovo G480 by aa820t
