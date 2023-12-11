@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.8.8
+- Added patch for AMD ZEN to fix microphone issue by qhuyduong
+
 #### v1.8.7
 - Added IDT 92HD81B1X5 layout-ID 76 for HP Elitebook 8x70 series by SkyrilHD
 - Fixed ALC256 layout-ID 68  for NUC 9 by littlesum 
