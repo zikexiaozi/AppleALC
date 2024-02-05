@@ -10286,6 +10286,24 @@
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>lshbluesky - Realtek ALC256 for Samsung Galaxy Book NT750XDA-KF59U</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>AhccIAIXHRACFx4hAhcfAAIXDAIBlxwwAZcdEAGXHqABlx+QAUccUAFHHQABRx4XAUcfkAFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>38</integer>
+					<key>WakeConfigData</key>
+					<data>AhcMAgFHDAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleALC</string>
